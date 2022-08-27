@@ -1,0 +1,11 @@
+<%- include('./includes/navbar.ejs') %>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <%- include('./includes/blogPost.ejs', {posts}) %>
+                    <!-- Pagination -->
+                    <%- include('./includes/paginatio.ejs', {pagination : posts}) %>
+            </div>
+        </div>
+    </div>
+    <%- include('./includes/footer.ejs') %>

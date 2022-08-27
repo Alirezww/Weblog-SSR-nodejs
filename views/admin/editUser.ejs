@@ -1,0 +1,33 @@
+<h3 class="mt-2 text-center">ویرایش پست</h3>
+<div class="w-50 mx-auto">
+    <%- include("../includes/validationErrors.ejs") %>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+    <form action="/dashboard/edit-user/<%= user._id %>" class="w-50" method="POST">
+        <div class="form-group">
+            <label for="fullname">نام و نام خانوادگی کاربر</label>
+            <input type="text" class="form-control w-50" name="fullname" id="fullname" value="<%= user.fullname %>" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">ایمیل کاربر</label>
+            <input type="text" class="form-control w-50" name="email" id="email" value="<%= user.email %>"/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">پسورد کاربر</label>
+            <input type="password" class="form-control w-50" name="password" id="password" value="<%= user.password %>"/>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">تکرار پسورد کاربر</label>
+            <input type="password" class="form-control w-50" name="confirmPassword" id="confirmPassword" value="<%= user.password %>"/>
+        </div>
+
+
+        <div class="row">
+            <input type="submit" value="ویرایش کاربر" class="btn btn-success m-2" />
+            <a href="/dashboard" class="btn btn-warning m-2">انصراف</a>
+        </div>
+    </form>
+</div>
